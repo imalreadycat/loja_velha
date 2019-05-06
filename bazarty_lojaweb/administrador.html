@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Administrador</title>
+  <link rel="stylesheet" type="text/css" href="semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="detalhes.css">
+  <link rel="stylesheet" type="text/css" href="login.html">
+  <link rel="stylesheet" type="text/css" href="ca_produto.html">
+  <link rel="stylesheet" type="text/css" href="cadrastro_cliente.html">
+  <link rel="stylesheet" type="text/css" href="car.html">
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-png" href="imagens/logo2.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+  <body>
+<div id="tudo">
+  <div id="cima" style="height: 10%;">
+    <img style="float: left; width: 14%; padding: 1%; float: left; " src="imagens/logo.png">
+     <div class="ui disabled category search" style="float: right; margin-top: 6%;">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Pesquisar">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+    <div id="carrinho" style="float: right; margin-right: 5%; margin-top: 6%;">
+      <a  href="car.html"><i class="cart plus icon"> Carrinho</i>
+    </div>     
+  </div>
+
+  <div id="Menu" style="height: 10%; margin-bottom: 3%;">
+    <div class="navbar">
+       <a  style="padding: 1%; margin: 0% 5%;"class="active" href="index.html"><i class="home icon"></i> Home</a> 
+      <a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Roupas</a> 
+    <a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Acessórios</a> 
+    <a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Sapatos</a> 
+    <a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Outros</a> 
+    <a  style="padding: 1%; margin-right: 4%;" href="login.html"><i class="user circle icon"></i> Login</a>
+    <a  style="padding: 1%; margin-right: 4%;" href="cadrastro_cliente.html"><i class="user outline icon"></i> Cadastre-se</a>
+   
+      </div>
+  </div>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+.main {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; 
+}
+
+.row:after {
+    content: "";
+    display:table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+
+}
+
+.show {
+  display: block;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+</style>
+
+<fieldset  style="border-top: 1px solid #333;border-bottom: none; border-left: none;border-right: none;display: block;text-align: center; color: orange">
+    <legend style="padding: 5px 10px;"><h1 class="titulo">Produtos da loja</h1></legend>
+<table class="ui very basic collapsing celled table" style="border-style: double;color: orange; width: 100%; height: 600px; ">
+  <thead>
+    <tr><th>Produtos</th>
+    <th>Descrição</th>
+    <th>Preço</th>
+    <th>Editar</th>
+    <th>Quantidade</th>
+    <th>Deletar</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px" src="imagens/ace2.png" class="ui mini rounded image">
+            <p>Relógio de flor</p>
+      </h4></td>
+      <td>
+<p >Duas regulagens para fecho</p>
+<p > Pulseira em Couro Plutônio</p>
+<p > Material do visor: Vidro</p>
+<p >Involucro em Liga metálica.</p>
+<p >Material da caixa: Relógio de Aço inoxidável</p>
+<p >Material de banda: Couro de alta Qualidade</p>
+<p >Largura : 2 cm</p>
+<p >Comprimento : 22 cm</p>
+<P >Peso: 30g</P>
+<p>Fecho: Abotoadura</p>
+<p>Geral: O material da cinta é de alta qualidade de couro, é um relógio perfeito</P>
+Temos nas cores : Preto , Vermelho e Branco
+
+      </td>
+      <td>
+        R$:49,99
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        100
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+           <img style="width: 107px;" src="imagens/ace4.png" class="ui mini rounded image">
+            <p>Relógio dourado flor</p>
+      </h4></td>
+      <td>
+        <p> Pulseira de ouro </p>
+<p>Marcas: Tommy Hilfiger</p>
+<p>Duas regulagens para fecho</p>
+<p>Material: vidro Cristal Mineral</p>
+<p >Involucro em Liga metálica.</p>
+<p >Material de banda: ouro de alta Qualidade</p>
+<p >Largura : 2 cm</p>
+<p >Comprimento : 22 cm</p>
+<P >Peso: 30g</P>
+<p>Fecho: Abotoadura</p>
+<p>Resistência: 5 ATM</p>
+<p>Geral: O material da cinta é de alta qualidade de couro, é um relógio perfeito</P>
+Temos nas cores : Preto , Vermelho e Branco
+      </td>
+      <td>
+        R$79,99
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+       75
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace6.png" class="ui mini rounded image">
+            <p>Colar  do amor</p>
+      </h4></td>
+     <td>
+       <p > Material: Cristal Austríaco</p>
+<p>Tipo de Jóias: Colares com Pendentes</p>
+<p>Peso Liquido (kg):  0.01</p>
+<p>listagem Data:  09/16/2013</p>
+<p>Estilo: Elegante, Fashion e Casual</p>
+      </td>
+      <td>
+      R$29,99
+      </td>
+      < <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        80
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace8.png" class="ui mini rounded image">
+            <p>Colar margarida seca</p>
+      </h4></td>
+      <td>
+        <p>Colar Artesanal Em Resina Com Flor Margarida Natural.</p>
+<p>Altura: .06</p>
+<p>Tamanho Pingente: 3 Cm Diâmetro </p>
+<p>Comprimento Do Cordão Artesanal: 45 Cm </p>
+<p>Hippie Artesanatos</p>
+      </td>
+      <td>
+        R$38,50
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        120
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace10.png" class="ui mini rounded image">
+            <p>Mochila listrada</p>
+      </h4></td>
+     <td>
+<p>Função: MOCHILAS BASICAS</p>
+<p>Largura (cm): 34 CM</p>
+<p>Altura (cm):  42 CM</p>
+<p>Capacidade: 5 KG</p>
+<p>Profundidade: 13 CM</p>
+<p>Matéria-prima;  Corpo: 100% Algodão. Forro: 100% Poliéster.</p>
+<p>Instruções de conservação:  Não lavar, não alvejar, não passar, não secar em tambor e não deixar de molho. Teme químicos e abrasivos.</p>
+      </td>
+      <td>
+       R$89,99
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        80
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace12.png" class="ui mini rounded image">
+            <p>Sapato feminino</p>
+      </h4></td>
+      <td>
+<p>Gênero: Feminino</p>
+<p>Indicado para: Dia a Dia</p>
+<p>Ocasião: Dia a Dia</p>
+<p>Material: Couro</p>
+<p>Solado: Borracha</p>
+<p>Garantia do Fabricante: Contra defeito de fabricação</p>
+      </td>
+      <td>
+        R$59,99
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        100
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace14.png" class="ui mini rounded image">
+            <p>Telas decorativas</p>
+      </h4></td>
+      <td>
+        <p>Tamanho da Tela: Médio Montado: 55x110cm (AxL) ou Grande Montado: 90x160cm (AxL)</p>
+<p>Acabamento: Selado</p>
+<p>Tecido: 100% Poliester Canvas</p>
+<p>Estampa:Digital de Alta Qualidade e Aplicado por Termotransferência</p>
+</div>
+      </td>
+      <td>
+        R$29,99
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        100
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace16.png" class="ui mini rounded image">
+            <p>Boné Colcci Trucker</p>
+      </h4></td>
+      <td>
+        <p>Tecido: 100% alcodão</p>
+<p>Estilo: casual e estiloso</p>
+<p>Apropriado: dia a dia</p>
+      </td>
+      <td>
+        R39,99
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        100
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace18.png" class="ui mini rounded image">
+            <p>Chinelo Oakley</p>
+      </h4></td>
+      <td>
+        <p>Chinelo com superfície única em EVA que proporciona secagem rápida.</p>
+<p> Perfeito para armazenamento em armários e uso em áreas com piscina</p>
+<P>Tira, palmilha e solado externo projetados para afastar a água dos pés</P>
+      </td>
+      <td>
+        R$27,80
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        35
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+         <img style="width: 107px;" src="imagens/ace20.png" class="ui mini rounded image">
+            <p>Tênis Oakley Modoc</p>
+      </h4></td>
+      <td>
+<p>Nome: Tênis Couro Oakley Enduro Masculino</p>
+<p>Gênero: Masculino</p>
+<p>Indicado para: Dia a Dia</p>
+<p>Estilo da Peça: Lisa</p>
+<p>Material: Couro</p>
+<p>Solado: Borracha</p>
+      </td>
+      <td>
+        R$ 129,99
+      </td>
+       <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        100
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace22.png" class="ui mini rounded image">
+            <p>Bolsa</p>
+      </h4></td>
+      <td>
+        p>Nome: Bolsa Anacapri Saco Tunísia Feminina</p>
+<p>Gênero: Feminino</p>
+<p>Indicado para: Dia a Dia</p>
+<p>Ocasião: Dia a Dia</p>
+<p>Estilo da Peça: Lisa</p>
+<P>Material: Sintético</P>
+<P>Modelo da Bolsa: Saco</P>
+<p>Alça: Ajustável</p>
+<P>Tipo de Uso: Tiracolo</P>
+<P>Fechamento: Enforque</P>
+      </td>
+      <td>
+        R$ 89,99
+      </td>
+      <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        100
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="ui image header">
+          <img style="width: 107px;" src="imagens/ace23.png" class="ui mini rounded image">
+            <p>Relógio masculino</p>
+      </h4></td>
+      <td>
+<p>Gênero: Feminino</p>
+<p>Indicado para: Dia a Dia</p>
+      </td>
+      <td>
+       R$ 109,990
+      </td>
+      <td>
+        <a href="#">Editar</a>
+      </td>
+      <td>
+        50
+      </td>
+      <td>
+        <a href="#">Deletar</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<fieldset  style="border-top: 1px solid #333;border-bottom: none; border-left: none;border-right: none;display: block;text-align: center; color: orange">
+    <legend style="padding: 5px 10px; padding-bottom: 2%"><h1 class="titulo">Adicionar mais produtos</h1></legend>
+    <div class="ui grid">
+  <div class="four wide column" style="border-style: double;color: orange;">
+    <p>Nome do produto</p></div>
+  <div class="four wide column" style="border-style: double;color: orange;" >
+    <p>Descrição</p>
+  <i class="sticky note outline icon"></i></div>
+  <div class="four wide column" style="border-style: double;color: orange;">
+    <p>Código</p></div>
+  <div class="four wide column" style="border-style: double;color: orange;">
+    <p>Adicione uma imagem</p>
+    <i class="images outline icon"></i>
+  </div>
+</div>
+
+ <div style="margin-top: 15%" id="rodape">
+    <div id="rc">
+      <div class="tr">
+        
+        <p class="dp">Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, Campus Itapetininga</p>
+      </div>
+      <div class="tr">
+        <p class="dp">Endereço: Av. João Olímpio de Oliveira, 1561 - Vila Asem, Itapetininga - SP, 18202-000</p>
+      </div>
+
+
+
+      <div class="tr">
+       
+        <p class="dp">Telefone´para contato: (15) 3376-9930</p>
+      </div>
+    </div>  
+      <div class="linro"></div>
+    <div id="rb">
+      <p id="da">©Untitled.   All rights reserved.   Designers: Adrielly e Thalia.    Ifsp Câmpus Itapetininga 2018.</p>
+      
+    </div>
+  </div>
+<link rel="stylesheet" type="text/css" href="semantic.min.jv">
+</body>
+</html>
+</body>
+</html>

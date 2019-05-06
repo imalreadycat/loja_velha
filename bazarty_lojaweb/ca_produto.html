@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadrastre dos produtos</title>
+   <link rel="stylesheet" type="text/css" href="semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="detalhes.css">
+  <link rel="stylesheet" type="text/css" href="login.html">
+  <link rel="stylesheet" type="text/css" href="ca_produto.html">
+  <link rel="stylesheet" type="text/css" href="cadrastro_cliente.html">
+  <link rel="stylesheet" type="text/css" href="car.html">
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-png" href="imagens/logo2.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+  <body>
+<div id="tudo">
+  <div id="cima" style="height: 10%;">
+    <img style="float: left; width: 14%; padding: 1%; float: left; " src="imagens/logo.png">
+     <div class="ui disabled category search" style="float: right; margin-top: 6%;">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Pesquisar">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+    <div id="carrinho" style="float: right; margin-right: 5%; margin-top: 6%;">
+      <a  href="car.html"><i class="cart plus icon"> Carrinho</i>
+    </div>     
+  </div>
+
+  <div id="Menu" style="height: 10%; margin-bottom: 3%;">
+    <div class="navbar">
+       <a  style="padding: 1%; margin: 0% 5%;"class="active" href="index.html"><i class="home icon"></i> Home</a> 
+      <a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Roupas</a> 
+    <a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Acessórios</a> 
+    <a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Sapatos</a> 
+    <a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Outros</a> 
+    <a  style="padding: 1%; margin-right: 4%;" href="login.html"><i class="user circle icon"></i> Login</a>
+    <a  style="padding: 1%; margin-right: 4%;" href="cadrastro_cliente.html"><i class="user outline icon"></i> Cadastre-se</a>
+   
+      </div>
+  </div>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+.main {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; 
+}
+
+.row:after {
+    content: "";
+    display:table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+
+}
+
+.show {
+  display: block;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 75%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+        <h2 style="color: orange"> Cadastre seu Produto</h2>
+        <hr align="center" width="100%" size="1" color=orange>
+      <form action="/action_page.php">
+      <a href="https://google.com" class="ui medium image">
+            <img style="width: 300px;height: 250px;background-color: white;color: orange; border-radius: 50%; float: right; perspective: all;border-style: double;border-width: 15px;" src="i.png">
+            </a>
+          <div class="col-50"></div>
+            <label for="cname">Nome do produto</label>
+            <input type="text" id="cname" name="cardname" placeholder="Colar...">
+            <label for="ccnum">Cód.Produto</label>
+            
+           
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label>Unidade de produtos:
+<select name="Unidade">
+<option value="em"> 1 </option>
+<option value="nt"> 2 </option>
+<option value="ns"> 3</option>
+<option value="em"> 4 </option>
+<option value="nt"> 5 </option>
+<option value="ns"> 6</option>
+<option value="em"> 7 </option>
+<option value="nt"> 8 </option>
+<option value="ns"> 9</option>
+<option value="em"> 10 </option>
+<option value="nt"> 100 </option>
+<option value="ns"> +1000</option>
+</select>
+</label>
+<br />
+<label>Tipo de Produto
+<input type="radio" name="cargo" value="1" checked> Roupas
+<input type="radio" name="cargo" value="2" > Sapatos
+<input type="radio" name="cargo" value="3" > Acessórios
+<input type="radio" name="cargo" value="3" > Outros
+</label>
+            <label for="expmonth">Descrição do produto</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="Detalhes">
+            <label>Tabela de cores:
+<select name="Cores">
+<option value="em"> Preto </option>
+<option value="nt"> Azul </option>
+<option value="ns"> Rosa</option>
+<option value="em"> Laranja </option>
+<option value="nt"> Verde </option>
+<option value="ns"> Amarelo</option>
+<option value="em"> Vermelho </option>
+<option value="nt"> Marrom </option>
+<option value="ns"> Vinho</option>
+<option value="em"> Branco </option>
+<option value="nt"> Dourado </option>
+<option value="ns"> Prata</option>
+<option value="ns"> Outras cores</option>
+
+</select>
+</label>
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Código de catálago</label>
+                <input type="text" id="expyear" name="expyear" placeholder="********">
+              </div>
+
+              <div class="col-50">
+                <label for="cvv">Código de fabricante</label>
+                <input type="text" id="cvv" name="cvv" placeholder="*******">
+
+              </div>
+            </div>
+             <div class="row">
+              <div class="col-50">
+                
+<select name="Cores">
+<option value="em"> Unidades </option>
+<option value="nt"> Pacote </option>
+<option value="ns"> Caixas</option>
+</select>
+</label>
+<hr align="center" width="100%" size="1" color=orange>
+<br><br>
+                
+              <div class="col-50">
+                <label for="cvv">Valor do produto</label>
+                <input type="text" id="cvv" name="cvv" placeholder="R$00,00">
+                <div class="row">
+              <div class="col-50">
+                <label for="expyear">Lucro do cliente</label>
+                <input type="text" id="expyear" name="expyear" placeholder="R$">
+              </div>
+
+              <div class="col-50">
+                <label for="cvv">Desconto</label>
+                <input type="text" id="cvv" name="cvv" placeholder="R$">
+
+              </div>
+            </div>
+              </div>
+            
+             
+            </div>
+          </div>
+          
+        </div>
+        
+      </form>
+    </div>
+  </div>
+  
+</div>
+ <div style="margin-top: 15%" id="rodape">
+    <div id="rc">
+      <div class="tr">
+        
+        <p class="dp">Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, Campus Itapetininga</p>
+      </div>
+      <div class="tr">
+        <p class="dp">Endereço: Av. João Olímpio de Oliveira, 1561 - Vila Asem, Itapetininga - SP, 18202-000</p>
+      </div>
+
+
+
+      <div class="tr">
+       
+        <p class="dp">Telefone´para contato: (15) 3376-9930</p>
+      </div>
+    </div>  
+      <div class="linro"></div>
+    <div id="rb">
+      <p id="da">©Untitled.   All rights reserved.   Designers: Adrielly e Thalia.    Ifsp Câmpus Itapetininga 2018.</p>
+      
+    </div>
+  </div>
+<link rel="stylesheet" type="text/css" href="semantic.min.jv">
+</body>
+</html>
+
+</body>
+</html>
